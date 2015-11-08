@@ -1,3 +1,0 @@
---Output from null required fields shouldn't validate--
---Output from blank required fields shouldn't validate--
---Output from returns the list of reports name converted according to the user's locale--

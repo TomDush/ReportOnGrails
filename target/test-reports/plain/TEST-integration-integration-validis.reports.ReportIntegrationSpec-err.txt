@@ -1,3 +1,0 @@
---Output from returns report name for a user with UK locale--
---Output from returns report name for a user with FRANCE locale--
---Output from removes a report--

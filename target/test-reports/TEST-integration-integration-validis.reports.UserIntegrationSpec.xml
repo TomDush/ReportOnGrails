@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" name="validis.reports.UserIntegrationSpec" tests="1" time="0.039" timestamp="2014-05-12T04:54:30">
-  <properties />
-  <testcase classname="validis.reports.UserIntegrationSpec" name="adds a new report" time="0.039" />
-  <system-out><![CDATA[--Output from adds a new report--
-]]></system-out>
-  <system-err><![CDATA[--Output from adds a new report--
-]]></system-err>
-</testsuite>

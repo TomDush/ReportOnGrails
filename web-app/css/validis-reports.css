@@ -1,0 +1,21 @@
+.user-list {
+    list-style-type: none;
+}
+.user-list > li {
+    margin-top: 20px;
+}
+.user-name {
+    font-weight: bold;
+    padding-left: 50px;
+}
+.user-message {
+    font-size: 0.8em;
+}
+
+.report-list {
+    list-style-type: disc;
+    margin-left: 70px;
+}
+.report-name {
+    font-style: italic;
+}
