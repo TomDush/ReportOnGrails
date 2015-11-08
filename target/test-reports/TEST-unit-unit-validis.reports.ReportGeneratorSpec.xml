@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" name="validis.reports.ReportGeneratorSpec" tests="1" time="3.162" timestamp="2014-05-12T04:54:17">
+  <properties />
+  <testcase classname="validis.reports.ReportGeneratorSpec" name="adds a report to the user" time="3.156" />
+  <system-out><![CDATA[--Output from adds a report to the user--
+]]></system-out>
+  <system-err><![CDATA[--Output from adds a report to the user--
+]]></system-err>
+</testsuite>

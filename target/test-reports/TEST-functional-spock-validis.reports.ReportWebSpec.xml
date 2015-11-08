@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" name="validis.reports.ReportWebSpec" tests="1" time="3.439" timestamp="2014-05-12T04:54:46">
+  <properties />
+  <testcase classname="validis.reports.ReportWebSpec" name="shows user name and reports of a user with UK locale" time="3.438" />
+  <system-out><![CDATA[--Output from shows user name and reports of a user with UK locale--
+]]></system-out>
+  <system-err><![CDATA[--Output from shows user name and reports of a user with UK locale--
+]]></system-err>
+</testsuite>

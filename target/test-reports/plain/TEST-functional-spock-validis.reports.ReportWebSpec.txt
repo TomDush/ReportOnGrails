@@ -1,0 +1,10 @@
+Testsuite: validis.reports.ReportWebSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 3.439 sec
+------------- Standard Output ---------------
+--Output from shows user name and reports of a user with UK locale--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from shows user name and reports of a user with UK locale--
+------------- ---------------- ---------------
+
+Testcase: shows user name and reports of a user with UK locale took 3.438 sec

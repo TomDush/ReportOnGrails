@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="0" name="ReportWebSpec" package="validis.reports" tests="1" time="3.439" timestamp="2014-05-12T04:54:46">
+      <properties />
+
+      <testcase classname="validis.reports.ReportWebSpec" name="shows user name and reports of a user with UK locale" time="3.438" />
+
+      <system-out><![CDATA[--Output from shows user name and reports of a user with UK locale--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from shows user name and reports of a user with UK locale--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="1" name="ReportIntegrationSpec" package="validis.reports" tests="3" time="0.283" timestamp="2014-05-12T04:54:30">
+      <properties />
+
+      <testcase classname="validis.reports.ReportIntegrationSpec" name="returns report name for a user with UK locale" time="0.172" />
+
+      <testcase classname="validis.reports.ReportIntegrationSpec" name="returns report name for a user with FRANCE locale" time="0.049" />
+
+      <testcase classname="validis.reports.ReportIntegrationSpec" name="removes a report" time="0.044" />
+
+      <system-out><![CDATA[--Output from returns report name for a user with UK locale--
+--Output from returns report name for a user with FRANCE locale--
+--Output from removes a report--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from returns report name for a user with UK locale--
+--Output from returns report name for a user with FRANCE locale--
+--Output from removes a report--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="2" name="UserIntegrationSpec" package="validis.reports" tests="1" time="0.039" timestamp="2014-05-12T04:54:30">
+      <properties />
+
+      <testcase classname="validis.reports.UserIntegrationSpec" name="adds a new report" time="0.039" />
+
+      <system-out><![CDATA[--Output from adds a new report--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from adds a new report--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="3" name="ReportBaseSpec" package="validis.reports" tests="10" time="1.033" timestamp="2014-05-12T04:54:16">
+      <properties />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals to null returns false" time="0.687" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals is reflexive" time="0.041" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals is transitive" time="0.042" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals is symmetric" time="0.034" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="hashCode of two equal objects is equal" time="0.037" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals is consistent" time="0.031" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="hashCode is consistent" time="0.036" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals to incompatible type returns false" time="0.032" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals and hashCode use id=2" time="0.034" />
+
+      <testcase classname="validis.reports.ReportBaseSpec" name="equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null" time="0.031" />
+
+      <system-out><![CDATA[--Output from equals to null returns false--
+--Output from equals is reflexive--
+--Output from equals is transitive--
+--Output from equals is symmetric--
+--Output from hashCode of two equal objects is equal--
+--Output from equals is consistent--
+--Output from hashCode is consistent--
+--Output from equals to incompatible type returns false--
+--Output from equals and hashCode use id=2--
+--Output from equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from equals to null returns false--
+--Output from equals is reflexive--
+--Output from equals is transitive--
+--Output from equals is symmetric--
+--Output from hashCode of two equal objects is equal--
+--Output from equals is consistent--
+--Output from hashCode is consistent--
+--Output from equals to incompatible type returns false--
+--Output from equals and hashCode use id=2--
+--Output from equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="4" name="ReportGeneratorSpec" package="validis.reports" tests="1" time="3.162" timestamp="2014-05-12T04:54:17">
+      <properties />
+
+      <testcase classname="validis.reports.ReportGeneratorSpec" name="adds a report to the user" time="3.156" />
+
+      <system-out><![CDATA[--Output from adds a report to the user--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from adds a report to the user--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="5" name="ReportNameConverterSpec" package="validis.reports" tests="3" time="0.309" timestamp="2014-05-12T04:54:20">
+      <properties />
+
+      <testcase classname="validis.reports.ReportNameConverterSpec" name="converts a report name based on a specific locale[0]" time="0.055" />
+
+      <testcase classname="validis.reports.ReportNameConverterSpec" name="converts a report name based on a specific locale[1]" time="0.063" />
+
+      <testcase classname="validis.reports.ReportNameConverterSpec" name="converts a report name based on a specific locale[2]" time="0.0" />
+
+      <system-out><![CDATA[--Output from converts a report name based on a specific locale[0]--
+--Output from converts a report name based on a specific locale[1]--
+--Output from converts a report name based on a specific locale[2]--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from converts a report name based on a specific locale[0]--
+--Output from converts a report name based on a specific locale[1]--
+--Output from converts a report name based on a specific locale[2]--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="6" name="UserBaseSpec" package="validis.reports" tests="11" time="0.657" timestamp="2014-05-12T04:54:20">
+      <properties />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals to null returns false" time="0.05" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals is reflexive" time="0.022" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals is transitive" time="0.021" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals is symmetric" time="0.021" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="hashCode of two equal objects is equal" time="0.019" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals is consistent" time="0.026" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="hashCode is consistent" time="0.019" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals to incompatible type returns false" time="0.019" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals and hashCode use name=Alex" time="0.021" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals and hashCode use locale=en_US" time="0.021" />
+
+      <testcase classname="validis.reports.UserBaseSpec" name="equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null" time="0.02" />
+
+      <system-out><![CDATA[--Output from equals to null returns false--
+--Output from equals is reflexive--
+--Output from equals is transitive--
+--Output from equals is symmetric--
+--Output from hashCode of two equal objects is equal--
+--Output from equals is consistent--
+--Output from hashCode is consistent--
+--Output from equals to incompatible type returns false--
+--Output from equals and hashCode use name=Alex--
+--Output from equals and hashCode use locale=en_US--
+--Output from equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from equals to null returns false--
+--Output from equals is reflexive--
+--Output from equals is transitive--
+--Output from equals is symmetric--
+--Output from hashCode of two equal objects is equal--
+--Output from equals is consistent--
+--Output from hashCode is consistent--
+--Output from equals to incompatible type returns false--
+--Output from equals and hashCode use name=Alex--
+--Output from equals and hashCode use locale=en_US--
+--Output from equals and hashCode ignore dd2060d0-a28d-11e0-8264-0800200c9a66=null--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="7" name="UserControllerSpec" package="validis.reports" tests="3" time="1.487" timestamp="2014-05-12T04:54:21">
+      <properties />
+
+      <testcase classname="validis.reports.UserControllerSpec" name="shows the user" time="1.142" />
+
+      <testcase classname="validis.reports.UserControllerSpec" name="returns the list of reports for a particular user" time="0.095" />
+
+      <testcase classname="validis.reports.UserControllerSpec" name="returns the new report added to the user" time="0.109" />
+
+      <system-out><![CDATA[--Output from shows the user--
+--Output from returns the list of reports for a particular user--
+--Output from returns the new report added to the user--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from shows the user--
+--Output from returns the list of reports for a particular user--
+--Output from returns the new report added to the user--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" id="8" name="UserSpec" package="validis.reports" tests="3" time="0.087" timestamp="2014-05-12T04:54:22">
+      <properties />
+
+      <testcase classname="validis.reports.UserSpec" name="null required fields shouldn&apos;t validate" time="0.043" />
+
+      <testcase classname="validis.reports.UserSpec" name="blank required fields shouldn&apos;t validate" time="0.02" />
+
+      <testcase classname="validis.reports.UserSpec" name="returns the list of reports name converted according to the user&apos;s locale" time="0.021" />
+
+      <system-out><![CDATA[--Output from null required fields shouldn't validate--
+--Output from blank required fields shouldn't validate--
+--Output from returns the list of reports name converted according to the user's locale--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from null required fields shouldn't validate--
+--Output from blank required fields shouldn't validate--
+--Output from returns the list of reports name converted according to the user's locale--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

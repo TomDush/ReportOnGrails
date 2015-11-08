@@ -1,0 +1,10 @@
+Testsuite: validis.reports.ReportGeneratorSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 3.162 sec
+------------- Standard Output ---------------
+--Output from adds a report to the user--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from adds a report to the user--
+------------- ---------------- ---------------
+
+Testcase: adds a report to the user took 3.156 sec

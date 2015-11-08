@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-David.local" name="validis.reports.UserControllerSpec" tests="3" time="1.487" timestamp="2014-05-12T04:54:21">
+  <properties />
+  <testcase classname="validis.reports.UserControllerSpec" name="shows the user" time="1.142" />
+  <testcase classname="validis.reports.UserControllerSpec" name="returns the list of reports for a particular user" time="0.095" />
+  <testcase classname="validis.reports.UserControllerSpec" name="returns the new report added to the user" time="0.109" />
+  <system-out><![CDATA[--Output from shows the user--
+--Output from returns the list of reports for a particular user--
+--Output from returns the new report added to the user--
+]]></system-out>
+  <system-err><![CDATA[--Output from shows the user--
+--Output from returns the list of reports for a particular user--
+--Output from returns the new report added to the user--
+]]></system-err>
+</testsuite>

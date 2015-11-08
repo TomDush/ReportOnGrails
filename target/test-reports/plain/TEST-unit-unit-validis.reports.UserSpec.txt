@@ -1,0 +1,16 @@
+Testsuite: validis.reports.UserSpec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+------------- Standard Output ---------------
+--Output from null required fields shouldn't validate--
+--Output from blank required fields shouldn't validate--
+--Output from returns the list of reports name converted according to the user's locale--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from null required fields shouldn't validate--
+--Output from blank required fields shouldn't validate--
+--Output from returns the list of reports name converted according to the user's locale--
+------------- ---------------- ---------------
+
+Testcase: null required fields shouldn't validate took 0.043 sec
+Testcase: blank required fields shouldn't validate took 0.02 sec
+Testcase: returns the list of reports name converted according to the user's locale took 0.021 sec
