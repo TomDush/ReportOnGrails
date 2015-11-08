@@ -9,7 +9,7 @@ class User {
 
     Locale locale
 
-    List reports
+    List<Report> reports
 
     static hasMany = [reports: Report]
 
