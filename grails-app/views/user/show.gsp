@@ -31,14 +31,12 @@ function refreshUserReport(userId) {
         url:"${g.createLink(controller:'user',action:'getReports')}",
         data: {id: userId},
         success: function(reports) {
-            console.log("Received: " + JSON.stringify(reports) + " ; length: " + reports.length);
             var ul = $('#report-list')
             // Remove all elements
             ul.empty()
             // Refill it...
             for (var i = 0; i < reports.length; i++) {
                 var report = reports[i]
-                console.log("Report: " + JSON.stringify(report));
                 ul.append('<li class="report"><span class="report-name">' + report.name + '</span></li>')
             }
         }

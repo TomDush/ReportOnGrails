@@ -1,6 +1,9 @@
 package validis.reports
 
+import org.springframework.stereotype.Service
+
 /** Report names converter, depending on locales */
+@Service
 class ReportNameConverter {
 
     /** Configure what method to use to translate report name */

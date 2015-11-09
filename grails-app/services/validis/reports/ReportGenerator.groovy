@@ -1,8 +1,11 @@
 package validis.reports
 
+import org.springframework.stereotype.Service
+
 /**
  * Generate new report for users
  */
+@Service
 class ReportGenerator {
 
     public static final int GENERATION_TIME = 3000

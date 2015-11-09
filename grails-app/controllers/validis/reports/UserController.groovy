@@ -1,9 +1,7 @@
 package validis.reports
 
 import grails.converters.JSON
-import groovy.util.logging.Slf4j
 
-@Slf4j
 class UserController {
 
     ReportNameConverter reportNameConverter
@@ -29,13 +27,8 @@ class UserController {
     /**
      * Get and translate report names for a given user
      */
-    def getReports(long id) {
-        def user = User.read id
-        if(user != null) {
-            render user.reportNames.collect({ report -> [name: reportNameConverter.convert(report.name, user.locale)] }) as JSON
-        } else {
-            render([] as JSON)
-        }
+    def getReports(User user) {
+        render user.reportNames.collect({ report -> [name: reportNameConverter.convert(report.name, user.locale)] }) as JSON
     }
 
     /** Add a report to this user and return report name as JSON in HTTP response */
