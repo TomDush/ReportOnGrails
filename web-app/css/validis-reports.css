@@ -34,6 +34,10 @@ h1 {
     font-style: italic;
     cursor: pointer;
 }
+
+.link {
+    cursor: pointer;
+}
 .report-list {
     list-style-type: disc;
     margin-left: 70px;
