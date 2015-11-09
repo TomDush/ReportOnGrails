@@ -26,27 +26,17 @@ class UserControllerSpec extends Specification {
         new Report(user: user, reportName: 'report_1').save()
         new Report(user: user, reportName: 'report_2').save()
 
-        when:
-        controller.getReports(user.id)
-
-        then:
-        response.text == '[{"name":"report_1"},{"name":"report_2"}]'
-    }
-
-    void 'returns the list of reports for a fr user'() {
-        given:
-        def user = new User(name: 'Tom', locale: Locale.FRENCH).save()
-        new Report(user: user, reportName: 'report_1').save()
-        new Report(user: user, reportName: 'report_2').save()
-
         and:
-        User.read(42) >> user
+        def reportNameConverter = Mock(ReportNameConverter)
+        reportNameConverter.convert(_, _) >>> ['rapport_1', 'rapport_2']
+
+        controller.reportNameConverter = reportNameConverter
 
         when:
         controller.getReports(user.id)
 
         then:
-        response.text == '[{"name":"ercbeg_1"},{"name":"ercbeg_2"}]'
+        response.text == '[{"name":"rapport_1"},{"name":"rapport_2"}]'
     }
 
     void 'returns the new report added to the user'() {
