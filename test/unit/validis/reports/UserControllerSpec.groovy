@@ -22,17 +22,31 @@ class UserControllerSpec extends Specification {
 
     void 'returns the list of reports for a particular user'() {
         given:
-        def user = new User(name: 'David', locale: Locale.UK).save()
-
-        and:
-        new Report(reportName: 'report_1', user: user).save()
-        new Report(reportName: 'report_2', user: user).save()
+        def user = new User(name: 'Tom', locale: Locale.UK).save()
+        new Report(user: user, reportName: 'report_1').save()
+        new Report(user: user, reportName: 'report_2').save()
 
         when:
         controller.getReports(user.id)
 
         then:
         response.text == '[{"name":"report_1"},{"name":"report_2"}]'
+    }
+
+    void 'returns the list of reports for a fr user'() {
+        given:
+        def user = new User(name: 'Tom', locale: Locale.FRENCH).save()
+        new Report(user: user, reportName: 'report_1').save()
+        new Report(user: user, reportName: 'report_2').save()
+
+        and:
+        User.read(42) >> user
+
+        when:
+        controller.getReports(user.id)
+
+        then:
+        response.text == '[{"name":"ercbeg_1"},{"name":"ercbeg_2"}]'
     }
 
     void 'returns the new report added to the user'() {

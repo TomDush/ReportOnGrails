@@ -14,10 +14,17 @@ class User {
 
     List<Report> reports
 
+    /** Derived method to get report names */
+    def getReportNames() {
+        reports.collect { r -> [name: r.reportName] }
+    }
+
     static hasMany = [reports: Report]
 
     static constraints = {
         name blank: false
         locale nullable: false
     }
+
+    static transients = ['reportNames']
 }

@@ -26,6 +26,14 @@ h1 {
 .breadcrumbs a {
     text-decoration: underline;
 }
+.refresh-btn {
+    float: right;
+    margin-right: 30px;
+    font-size: 0.9em;
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
 .report-list {
     list-style-type: disc;
     margin-left: 70px;

@@ -14,18 +14,13 @@
 
 <ul class="user-list">
     <g:each in="${users}" var="user">
-        <li><a class="user-name" href="show/${user.id}">${user.name}</a> :
+        <li><a class="user-name" href="show/${user.id}">${user.name}</a> <span class="user-lang">(${user.locale})</span> :
             <g:if test="${user.reports == null || user.reports.isEmpty()}">
                 <span class="user-message">No report for this user.</span>
             </g:if>
             <g:else>
                 <span class="user-message">${user.reports.size()} report(s)</span>
             </g:else>
-        %{--<ul class="report-list">--}%
-        %{--<g:each in="${user.reports}" var="report">--}%
-        %{--<li class="report"><span class="report-name">${report.reportName}</span></li>--}%
-        %{--</g:each>--}%
-        %{--</ul>--}%
         </li>
     </g:each>
 </ul>
