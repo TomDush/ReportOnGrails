@@ -6,7 +6,11 @@
 </head>
 
 <body>
-<h1><g:message code="user.title"/>: ${user.name}</h1>
+<div class="breadcrumbs">
+    <a class="small-link">Users list</a> > User details
+</div>
+
+<h1>${user.name}</h1>
 
 <ul class="report-list">
     <g:each in="${user.reports}" var="report">

@@ -1,3 +1,8 @@
+h1 {
+    padding-left: 5px;
+}
+
+/* User list page */
 .user-list {
     list-style-type: none;
 }
@@ -12,6 +17,15 @@
     font-size: 0.8em;
 }
 
+/* User show page */
+.breadcrumbs {
+    font-size: 0.7em;
+    color: #666666;
+    margin: 10px;
+}
+.breadcrumbs a {
+    text-decoration: underline;
+}
 .report-list {
     list-style-type: disc;
     margin-left: 70px;
@@ -20,6 +34,7 @@
     font-style: italic;
 }
 
+/* Copied from somewhere else */
 .alert {
     /* Bootstrap copy*/
     background-color: rgb(242, 222, 222);

@@ -8,11 +8,11 @@ class ReportBaseSpec extends EqualsHashCodeSpec {
 
     @Override
     protected createObjectToCompare() {
-        new Report(id: 1)
+        new Report(user: new User(id: 1, name: 'Ironman'), reportName: 'report_1')
     }
 
     @Override
     protected modifiedPropertiesIncludedInEqualsAndHashCode() {
-        [id: 2]
+        [user: new User(id: 2, name: 'Blackwidow'), reportName: 'report_2']
     }
 }

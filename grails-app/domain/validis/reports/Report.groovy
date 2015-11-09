@@ -2,8 +2,9 @@ package validis.reports
 
 import groovy.transform.EqualsAndHashCode
 
-@EqualsAndHashCode(includes = ['id'])
+@EqualsAndHashCode(includes = ['user', 'reportName'])
 class Report {
+
     String reportName
 
     Report() {
@@ -14,6 +15,6 @@ class Report {
     }
 
     static belongsTo = [user: User]
-    static constraints = { }
+    static constraints = {}
 
 }
