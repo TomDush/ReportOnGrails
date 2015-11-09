@@ -5,7 +5,7 @@ import grails.test.mixin.TestFor
 import spock.lang.Specification
 
 @TestFor(UserController)
-@Mock([User])
+@Mock([User, Report])
 class UserControllerSpec extends Specification {
 
     void 'shows the user'() {
@@ -22,11 +22,14 @@ class UserControllerSpec extends Specification {
 
     void 'returns the list of reports for a particular user'() {
         given:
-        def user = Mock(User)
-        user.reportNames >> [[name: 'report_1'], [name: 'report_2']]
+        def user = new User(name: 'David', locale: Locale.UK).save()
+
+        and:
+        new Report(reportName: 'report_1', user: user).save()
+        new Report(reportName: 'report_2', user: user).save()
 
         when:
-        controller.getReports(user)
+        controller.getReports(user.id)
 
         then:
         response.text == '[{"name":"report_1"},{"name":"report_2"}]'

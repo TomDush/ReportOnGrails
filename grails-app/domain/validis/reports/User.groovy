@@ -1,7 +1,10 @@
 package validis.reports
 
+import groovy.transform.EqualsAndHashCode
+
 import javax.validation.constraints.NotNull
 
+@EqualsAndHashCode(includes = ['name', 'locale'])
 class User {
 
     @NotNull

@@ -1,31 +1,29 @@
 package validis.reports
 
+import grails.converters.JSON
 import groovy.util.logging.Slf4j
 
 @Slf4j
 class UserController {
 
     def index() {
-        // Get sorted users...
-        def users = [
-                new User().with {
-                    name = "Dush"
-                    reports = [new Report("report_1"), new Report("report_2"), new Report("report_3")]
-                    it
-                },
-                new User().with {
-                    name = "Tom"
-                    reports = [new Report("report_4"), new Report("report_5"), new Report("report_6")]
-                    it
-                },
-                new User().with {
-                    name = "Naruto"
-                    it
-                }
-        ]
-        users.sort({u1, u2 -> u1.name.compareTo(u2.name)})
+        def users = User.list(sort: 'name')
 
         return [users: users]
     }
 
+    def show(long id) {
+        def user = User.read(id)
+        if (!user) {
+            flash.message = "User with id ${id} doesn't exist."
+            redirect(action: 'index')
+        }
+
+        render view: "show", model: ['user': user]
+    }
+
+    def getReports(long id) {
+        def user = User.read id
+        render user.reports.collect { r -> [name: r.reportName] } as JSON
+    }
 }

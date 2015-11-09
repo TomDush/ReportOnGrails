@@ -1,5 +1,8 @@
 package validis.reports
 
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode(includes = ['id'])
 class Report {
     String reportName
 
