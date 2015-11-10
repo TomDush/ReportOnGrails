@@ -33,7 +33,7 @@ class ReportWebSpec extends GebReportingSpec {
         def remote = new RemoteControl()
         def userId = remote {
             def frUser = new User(name: 'FR User', locale: Locale.FRANCE).save()
-            new Report(user: frUser, reportName: 'ercbeg_1').save()
+            new Report(user: frUser, reportName: 'report_1').save()
 
             return frUser.id
         }
@@ -43,7 +43,7 @@ class ReportWebSpec extends GebReportingSpec {
 
         then: "Report names should be 'translated'"
         userName == 'FR User'
-        userReports == ['report_1']
+        userReports == ['ercbeg_1']
     }
 
     @Ignore
