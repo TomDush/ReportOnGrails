@@ -33,6 +33,11 @@ class UserSpec extends Specification {
         def (firstReport, secondReport) = [reportMock(id: 1), reportMock(id: 2)]
         user.reports = [firstReport, secondReport]
 
+        and:
+        def reportNameConverter = Mock(ReportNameConverter)
+        reportNameConverter.convert(_, _) >>> ['report_1', 'report_2']
+        user.reportNameConverter = reportNameConverter
+
         when:
         def reportNames = user.reportNames
 

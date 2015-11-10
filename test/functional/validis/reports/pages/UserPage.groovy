@@ -8,7 +8,7 @@ class UserPage extends Page {
 
     static content = {
         userName { $('.user-name').text() }
-        userReports { $('.user-reports li')*.text() }
+        userReports { $('.report-list li')*.text() }
         addReportButton { $('.add-report') }
         reportCounter required: false, { $('.report-counter').text() }
     }

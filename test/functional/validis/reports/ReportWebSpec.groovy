@@ -1,24 +1,49 @@
 package validis.reports
 
 import geb.spock.GebReportingSpec
+import grails.plugin.remotecontrol.RemoteControl
 import org.junit.Ignore
 import validis.reports.pages.UserPage
 
 class ReportWebSpec extends GebReportingSpec {
 
     void 'shows user name and reports of a user with UK locale'() {
-        //TODO Do not load data in bootstrap and use specific fixtures for each test scenario
-        when:
-        to UserPage, 1
+        when: "A UK user with 2 reports exists"
+
+        def remote = new RemoteControl()
+        def userId = remote {
+            def ukUser = new User(name: 'UK User', locale: Locale.UK).save()
+            new Report(user: ukUser, reportName: 'report_1').save()
+            new Report(user: ukUser, reportName: 'report_2').save()
+
+            return ukUser.id
+        }
+
+        and: "Go to this user page"
+        to UserPage, userId
 
         then:
-        userName == 'David'
-        userReports == ['report_1', 'report_2', 'report_3']
+        userName == 'UK User'
+        userReports == ['report_1', 'report_2']
+
     }
 
-    @Ignore
     void 'shows user name and reports of a user with FRANCE locale'() {
-        //TODO
+        when: "A FRENCH user with 1 report exists"
+        def remote = new RemoteControl()
+        def userId = remote {
+            def frUser = new User(name: 'FR User', locale: Locale.FRANCE).save()
+            new Report(user: frUser, reportName: 'ercbeg_1').save()
+
+            return frUser.id
+        }
+
+        and: "Go to this user page"
+        to UserPage, userId
+
+        then: "Report names should be 'translated'"
+        userName == 'FR User'
+        userReports == ['report_1']
     }
 
     @Ignore

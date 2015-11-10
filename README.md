@@ -1,3 +1,13 @@
+Report On Grails
+================
+
+Requirements
+------------
+
+* Jdk 7 (not 8)
+* Gradle
+* Grails v2.3.11 (precisely)
+
 Grails basics
 -----------------
 Grails has a 'convention over configration' approach and so expects different parts of the system to appear in defined

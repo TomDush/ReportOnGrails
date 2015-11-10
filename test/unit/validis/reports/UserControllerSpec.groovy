@@ -25,18 +25,11 @@ class UserControllerSpec extends Specification {
         def user = Mock(User)
         user.reportNames >> [[name: 'report_1'], [name: 'report_2']]
 
-        and:
-        def reportNameConverter = Mock(ReportNameConverter)
-        reportNameConverter.convert('report_1', _) >> 'rapport_1'
-        reportNameConverter.convert('report_2', _) >> 'rapport_2'
-
-        controller.reportNameConverter = reportNameConverter
-
         when:
         controller.getReports(user)
 
         then:
-        response.text == '[{"name":"rapport_1"},{"name":"rapport_2"}]'
+        response.text == '[{"name":"report_1"},{"name":"report_2"}]'
     }
 
     void 'returns the new report added to the user'() {

@@ -15,7 +15,7 @@
     <a onclick="refreshUserReport(${user.id})" class="link"><g:message code="generic.refresh"/></a>
 </div>
 
-<h1>${user.name}</h1>
+<h1 class="user-name">${user.name}</h1>
 
 <div>
     <ul id="report-list" class="report-list">
@@ -26,7 +26,7 @@
 <div id="generationInProgress"><g:message code="user.details.inProgress"/>: <span id="generationNumber">0</span></div>
 
 <div class="generate-btn">
-    <a onclick="generateNewReport(${user.id})" class="link"><g:message code="report.generate"/></a>
+    <a onclick="generateNewReport(${user.id})" class="link add-report"><g:message code="report.generate"/></a>
 </div>
 
 
@@ -45,7 +45,7 @@ function updateGenerationCount(diff) {
 
 // Add a report in UL list
 function addReportName(ul, reportName) {
-    ul.append('<li class="report"><span class="report-name">' + reportName + '</span></li>');
+    ul.append('<li class="report-name">' + reportName + '</li>');
 }
 
 // Refresh report name lists

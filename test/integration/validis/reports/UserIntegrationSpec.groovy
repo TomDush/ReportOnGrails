@@ -11,6 +11,6 @@ class UserIntegrationSpec extends GrailsIntegrationSpec {
 
         then:
         Report.all.size() == old(Report.all.size()) + 1
-        reportName == Report.last().name
+        reportName == Report.last().reportName
     }
 }

@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull
 @EqualsAndHashCode(includes = ['name', 'locale'])
 class User {
 
+    ReportNameConverter reportNameConverter
+
     @NotNull
     String name
 
@@ -14,9 +16,9 @@ class User {
 
     List<Report> reports
 
-    /** Derived method to get report names */
+    /** Derived method to get report names properly translated */
     def getReportNames() {
-        reports.collect { r -> [name: r.reportName] }
+        reports.collect { r -> [name: reportNameConverter.convert(r.reportName, locale)] }
     }
 
     static hasMany = [reports: Report]
@@ -26,7 +28,7 @@ class User {
         locale nullable: false
     }
 
-    static transients = ['reportNames']
+    static transients = ['reportNames', 'reportNameConverter']
 
     /**
      * Create a report and return it.
@@ -34,9 +36,13 @@ class User {
      * We assume we can't delete any report.
      **/
     def synchronized addReport() {
+        if (reports == null) {
+            reports = []
+        }
+
         def report = new Report(user: this, reportName: "report_${reports.size() + 1}")
         reports.add report
 
-        return report.reportName
+        return reportNameConverter.convert(report.reportName, locale)
     }
 }

@@ -4,8 +4,6 @@ import grails.converters.JSON
 
 class UserController {
 
-    ReportNameConverter reportNameConverter
-
     ReportGenerator reportGenerator
 
     def index() {
@@ -28,13 +26,13 @@ class UserController {
      * Get and translate report names for a given user
      */
     def getReports(User user) {
-        render user.reportNames.collect({ report -> [name: reportNameConverter.convert(report.name, user.locale)] }) as JSON
+        render user.reportNames as JSON
     }
 
     /** Add a report to this user and return report name as JSON in HTTP response */
     def addReport(User user) {
         def reportName = reportGenerator.addReport user
-        render([name: reportNameConverter.convert(reportName, user.locale)] as JSON)
+        render([name: reportName] as JSON)
     }
 
 }
