@@ -1,5 +1,5 @@
 h1 {
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 /* User list page */
@@ -35,20 +35,33 @@ h1 {
     cursor: pointer;
 }
 
-.generate-btn {
-    font-size: 0.9em;
-    text-decoration: underline;
-    padding: 20px 0 0 20px;
-}
-.link {
-    cursor: pointer;
-}
 .report-list {
     list-style-type: disc;
     margin-left: 70px;
 }
+
 .report-name {
     font-style: italic;
+}
+
+.link {
+    cursor: pointer;
+}
+.generate-btn {
+    font-size: 0.9em;
+    margin: 20px 0 0 10px;
+}
+
+.generate-btn a {
+    text-decoration: underline;
+}
+
+#generationInProgress {
+    margin-left: 55px;
+    margin-top: 10px;
+    font-style: italic;
+
+    font-size: 0.8em;
 }
 
 /* Copied from somewhere else */
