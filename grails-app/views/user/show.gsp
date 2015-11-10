@@ -29,11 +29,8 @@
     <a onclick="generateNewReport(${user.id})" class="link"><g:message code="report.generate"/></a>
 </div>
 
-</body>
 
 <r:script>
-// In real word application, we'll certainly want this script somewhere else!
-
 // Manage generation counter
 var generation = 0;
 function updateGenerationCount(diff) {
@@ -93,4 +90,5 @@ function generateNewReport(userId) {
 refreshUserReport(${user.id});
 updateGenerationCount(0);
 </r:script>
+</body>
 </html>

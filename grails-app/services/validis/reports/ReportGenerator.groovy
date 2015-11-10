@@ -16,6 +16,7 @@ class ReportGenerator {
         Thread.sleep(GENERATION_TIME)
 
         // Create report and save user (and implicitly the report)
+        user.refresh()
         user.addReport()
     }
 }
