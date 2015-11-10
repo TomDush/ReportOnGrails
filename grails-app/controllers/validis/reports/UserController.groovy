@@ -34,7 +34,7 @@ class UserController {
     /** Add a report to this user and return report name as JSON in HTTP response */
     def addReport(User user) {
         def reportName = reportGenerator.addReport user
-        render([name: reportName] as JSON)
+        render([name: reportNameConverter.convert(reportName, user.locale)] as JSON)
     }
 
 }

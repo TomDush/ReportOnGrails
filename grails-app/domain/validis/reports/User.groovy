@@ -14,9 +14,6 @@ class User {
 
     List<Report> reports
 
-    /** Sequence used to generate report names */
-    Long reportIdSequence = 1
-
     /** Derived method to get report names */
     def getReportNames() {
         reports.collect { r -> [name: r.reportName] }
@@ -31,9 +28,13 @@ class User {
 
     static transients = ['reportNames']
 
-    /** Create a report and return it */
+    /**
+     * Create a report and return it.
+     * <p>
+     * We assume we can't delete any report.
+     **/
     def synchronized addReport() {
-        def report = new Report(user: this, reportName: "report_${reportIdSequence++}")
+        def report = new Report(user: this, reportName: "report_${reports.size() + 1}")
         reports.add report
 
         return report.reportName
